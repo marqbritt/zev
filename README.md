@@ -7,11 +7,53 @@ Zev helps you remember (or discover) terminal commands using natural language.
 
 ![Description](./.github/demo.gif)
 
-## 🔧 Installation
 
+### For Local Development
+
+To install zev locally for development where you can make changes to the code:
+
+#### Prerequisites
+- Python 3.10 or higher
+- Git
+
+#### Installation Steps
+
+1. **Clone the repository**:
 ```bash
-pip install zev
+git clone https://github.com/dtnewman/zev.git
+cd zev
 ```
+
+2. **Install in editable mode**:
+
+**macOS/Linux:**
+```bash
+pip install -e .
+# Or if you have multiple Python versions:
+python3 -m pip install -e .
+```
+
+**Windows:**
+```cmd
+pip install -e .
+# Or if you have multiple Python versions:
+python -m pip install -e .
+```
+
+3. **Verify installation**:
+```bash
+zev --help
+```
+
+#### How Editable Installation Works
+- Creates a link to your local repository instead of copying files
+- Any changes you make to files in `src/zev/` are immediately reflected when you run `zev`
+- No need to reinstall after making changes
+
+#### Python Version Notes
+- **macOS**: If you get a "command not found" error, you may need Python 3.10+. Install via Homebrew: `brew install python@3.11`
+- **Linux**: Use your package manager to install Python 3.10+ (e.g., `apt install python3.11` on Ubuntu)
+- **Windows**: Download Python 3.10+ from [python.org](https://python.org)
 
 - **Note:** This project runs on top of LLM APIs like OpenAI, Google's Gemini, or [Ollama](https://ollama.com/).
 
